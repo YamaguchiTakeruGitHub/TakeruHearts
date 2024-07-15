@@ -19,6 +19,18 @@
     <Filter Include="ヘッダー ファイル\Scene">
       <UniqueIdentifier>{f0e2639c-570e-4f1c-a670-0bb0d39c3ef7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\UI">
+      <UniqueIdentifier>{14f9e05e-f5b9-4afd-9afd-343a2d889552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\UI">
+      <UniqueIdentifier>{19b36ffe-75b2-454c-a657-ff779884fd59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\UI\Button">
+      <UniqueIdentifier>{2378a05b-4373-4b57-8d3d-aeb3709886b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\UI\Button">
+      <UniqueIdentifier>{ebb5b918-2927-4ebb-b1a7-dd521e0d6573}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -39,6 +51,12 @@
     <ClCompile Include="Scene\SceneManager.cpp">
       <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="UI\Button\Button.cpp">
+      <Filter>ソース ファイル\UI\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Button\ButtonTitleNewGame.cpp">
+      <Filter>ソース ファイル\UI\Button</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene\SceneBase.h">
@@ -58,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="Scene\SceneManager.h">
       <Filter>ヘッダー ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Button\Button.h">
+      <Filter>ヘッダー ファイル\UI\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Button\ButtonTitleNewGame.h">
+      <Filter>ヘッダー ファイル\UI\Button</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
