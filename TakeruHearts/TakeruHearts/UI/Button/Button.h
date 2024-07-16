@@ -11,5 +11,5 @@ namespace UI
 		virtual void Push() = 0;
 
 	};
-};
+}
 

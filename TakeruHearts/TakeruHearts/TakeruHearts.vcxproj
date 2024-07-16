@@ -139,6 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animation\AnimationManager.cpp" />
+    <ClCompile Include="Character\CharacterBase.cpp" />
+    <ClCompile Include="TKRLib\Rigidbody.cpp" />
+    <ClCompile Include="Status\StatusMaster.cpp" />
     <ClCompile Include="UI\Button\ButtonTitleNewGame.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
@@ -149,6 +153,12 @@
     <ClCompile Include="UI\Button\Button.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation\AnimationManager.h" />
+    <ClInclude Include="Animation\AnimData.h" />
+    <ClInclude Include="Character\CharacterBase.h" />
+    <ClInclude Include="TKRLib\Rigidbody.h" />
+    <ClInclude Include="Status\StatusMaster.h" />
+    <ClInclude Include="TKRLib\TKRLib.h" />
     <ClInclude Include="UI\Button\ButtonTitleNewGame.h" />
     <ClInclude Include="CommonScene.h" />
     <ClInclude Include="Scene\SceneManager.h" />
