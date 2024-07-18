@@ -10,15 +10,6 @@ namespace Animation
 		//アニメーションコンストラクタ追加する
 		AnimationManager(AnimData::Anim animTarget);
 
-
-
-	private:
-		//個別に持っていく
-		/*float animTotalTime;
-		float animNowTime;
-		int animAttachIndex;
-		int animMoveFrameIndex;*/
-
 	protected:
 		
 		AnimData* animData;//アニメーション判定データ

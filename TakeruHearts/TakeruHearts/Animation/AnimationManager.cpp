@@ -1,4 +1,5 @@
 #include "AnimationManager.h"
+#include "AnimationDataPlayer.h"
 
 using namespace Animation;
 
@@ -17,6 +18,7 @@ AnimData* AnimationManager::CreateAnimationData(AnimData::Anim anim)
 	if (anim == AnimData::Anim::Player)
 	{
 		//プレイヤーアニメーションデータのコンストラクタを初期化new
+		animData = new AnimationDataPlayer();
 	}
 	else
 	if (anim == AnimData::Anim::Companion)

@@ -87,12 +87,6 @@
     <ClCompile Include="Scene\SceneManager.cpp">
       <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="UI\Button\Button.cpp">
-      <Filter>ソース ファイル\UI\Button</Filter>
-    </ClCompile>
-    <ClCompile Include="UI\Button\ButtonTitleNewGame.cpp">
-      <Filter>ソース ファイル\UI\Button</Filter>
-    </ClCompile>
     <ClCompile Include="Character\CharacterBase.cpp">
       <Filter>ソース ファイル\Character</Filter>
     </ClCompile>
@@ -104,6 +98,27 @@
     </ClCompile>
     <ClCompile Include="Animation\AnimationManager.cpp">
       <Filter>ソース ファイル\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation\AnimationDataPlayer.cpp">
+      <Filter>ソース ファイル\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Character\Fellows\Fellows.cpp">
+      <Filter>ソース ファイル\Character\Fellows</Filter>
+    </ClCompile>
+    <ClCompile Include="Character\Fellows\Player.cpp">
+      <Filter>ソース ファイル\Character\Fellows</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UI.cpp">
+      <Filter>ソース ファイル\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UIData.cpp">
+      <Filter>ソース ファイル\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Config\Config.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -125,12 +140,6 @@
     <ClInclude Include="Scene\SceneManager.h">
       <Filter>ヘッダー ファイル\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="UI\Button\Button.h">
-      <Filter>ヘッダー ファイル\UI\Button</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\Button\ButtonTitleNewGame.h">
-      <Filter>ヘッダー ファイル\UI\Button</Filter>
-    </ClInclude>
     <ClInclude Include="Character\CharacterBase.h">
       <Filter>ヘッダー ファイル\Character</Filter>
     </ClInclude>
@@ -148,6 +157,27 @@
     </ClInclude>
     <ClInclude Include="Animation\AnimData.h">
       <Filter>ヘッダー ファイル\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation\AnimationDataPlayer.h">
+      <Filter>ヘッダー ファイル\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UIData.h">
+      <Filter>ヘッダー ファイル\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UI.h">
+      <Filter>ヘッダー ファイル\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Character\Fellows\Fellows.h">
+      <Filter>ヘッダー ファイル\Character\Fellows</Filter>
+    </ClInclude>
+    <ClInclude Include="Character\Fellows\Player.h">
+      <Filter>ヘッダー ファイル\Character\Fellows</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Config\Config.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -22,5 +22,12 @@ namespace Animation
 	private:
 		Anim anim;//インスタンス化
 
+		//個別に持っていく
+		/*float animTotalTime;
+		float animNowTime;
+		int animAttachIndex;
+		int animMoveFrameIndex;*/
+
+
 	};
 }

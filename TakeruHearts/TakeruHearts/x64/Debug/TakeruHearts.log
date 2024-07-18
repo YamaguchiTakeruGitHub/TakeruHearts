@@ -1,6 +1,8 @@
 ﻿  CharacterBase.cpp
 C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  Rigidbody.cpp
+  Fellows.cpp
+C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  Player.cpp
 C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   コードを生成中...
   TakeruHearts.vcxproj -> C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\x64\Debug\TakeruHearts.exe

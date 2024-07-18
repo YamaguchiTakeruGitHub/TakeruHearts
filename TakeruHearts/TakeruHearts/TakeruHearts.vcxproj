@@ -139,34 +139,44 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animation\AnimationDataPlayer.cpp" />
     <ClCompile Include="Animation\AnimationManager.cpp" />
     <ClCompile Include="Character\CharacterBase.cpp" />
+    <ClCompile Include="Character\Fellows\Fellows.cpp" />
+    <ClCompile Include="Character\Fellows\Player.cpp" />
+    <ClCompile Include="Config\Config.cpp" />
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="TKRLib\Rigidbody.cpp" />
     <ClCompile Include="Status\StatusMaster.cpp" />
-    <ClCompile Include="UI\Button\ButtonTitleNewGame.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
     <ClCompile Include="Scene\SceneResult.cpp" />
     <ClCompile Include="Scene\SceneGame.cpp" />
     <ClCompile Include="Scene\SceneBase.cpp" />
     <ClCompile Include="Scene\SceneTitle.cpp" />
-    <ClCompile Include="UI\Button\Button.cpp" />
+    <ClCompile Include="UI\UIData.cpp" />
+    <ClCompile Include="UI\UI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation\AnimationDataPlayer.h" />
     <ClInclude Include="Animation\AnimationManager.h" />
     <ClInclude Include="Animation\AnimData.h" />
     <ClInclude Include="Character\CharacterBase.h" />
+    <ClInclude Include="Character\Fellows\Fellows.h" />
+    <ClInclude Include="Character\Fellows\Player.h" />
+    <ClInclude Include="Config\Config.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="TKRLib\Rigidbody.h" />
     <ClInclude Include="Status\StatusMaster.h" />
     <ClInclude Include="TKRLib\TKRLib.h" />
-    <ClInclude Include="UI\Button\ButtonTitleNewGame.h" />
     <ClInclude Include="CommonScene.h" />
     <ClInclude Include="Scene\SceneManager.h" />
     <ClInclude Include="Scene\SceneResult.h" />
     <ClInclude Include="Scene\SceneGame.h" />
     <ClInclude Include="Scene\SceneBase.h" />
     <ClInclude Include="Scene\SceneTitle.h" />
-    <ClInclude Include="UI\Button\Button.h" />
+    <ClInclude Include="UI\UIData.h" />
+    <ClInclude Include="UI\UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

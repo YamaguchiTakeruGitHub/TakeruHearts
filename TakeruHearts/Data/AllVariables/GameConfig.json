@@ -1,4 +1,15 @@
 {
-    "screenWidth": 1280,
-    "screenHeight": 960
+    "screenWidth": 640,
+    "screenHeight": 480,
+    "a": OK,
+    "b": CANCEL,
+    "x": X,
+    "y": Y,
+    "up": UP,
+    "down": DOWN,
+    "left": LEFT,
+    "right": RIGHT,
+    "menu": MENU,
+    "leftTHUMB": LEFT_THUMB ,
+    "rightTHUMB": RIGHT_THUMB
 }

@@ -11,16 +11,15 @@ namespace Character
 	{
 	public:
 		CharacterBase();
-		virtual ~CharacterBase();
+		virtual ~CharacterBase() {};
 
-		
 
 	protected:
 		TKRLib::Rigidbody rigidbody;
-		Status::StatusMaster status;
-		Animation::AnimationManager animManager;
+		/*Status::StatusMaster status;
+		Animation::AnimationManager animManager;*/
 
-
+		int modelHandle;
 		
 	};
 
