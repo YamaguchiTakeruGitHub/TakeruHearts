@@ -13,19 +13,23 @@ SceneGame::~SceneGame()
 void SceneGame::Init()
 {
 	DrawFormatString(0, 40, 0xffffff, "Game‰Šú‰»");
+	idm->Init();
 }
 
 void SceneGame::Update()
 {
 	DrawFormatString(0, 60, 0xffffff, "GameXV");
+	idm->Update();
 }
 
 void SceneGame::Draw()
 {
 	DrawFormatString(0, 80, 0xffffff, "Game•`‰æ");
+	idm->Draw();
 }
 
 void SceneGame::End()
 {
 	DrawFormatString(0, 100, 0xffffff, "Game‰ğ•ú");
+	idm->End();
 }

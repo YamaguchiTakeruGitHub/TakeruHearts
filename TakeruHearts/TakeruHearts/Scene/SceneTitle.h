@@ -2,7 +2,6 @@
 #include "SceneBase.h"
 
 
-class UI;
 class SceneTitle final
 	: public SceneBase
 {
@@ -15,7 +14,5 @@ public:
 	void Draw();
 	void End();
 
-private:
-	UI* ui;
 };
 

@@ -67,6 +67,12 @@
     <Filter Include="ヘッダー ファイル\Animation">
       <UniqueIdentifier>{5ba8c7e4-1254-4db0-a6c4-c8de4eb28833}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Config">
+      <UniqueIdentifier>{4c3a49f6-1b1d-468c-bd0b-f16298868b50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Config">
+      <UniqueIdentifier>{67d8a88c-7af3-4ea8-958f-fab6f2b6d1ae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -114,7 +120,13 @@
     <ClCompile Include="UI\UIData.cpp">
       <Filter>ソース ファイル\UI</Filter>
     </ClCompile>
-    <ClCompile Include="Controller.cpp">
+    <ClCompile Include="InputDevice\InputDeviceManager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDevice\Pad\JoyPad.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDevice\KeyBoard\KeyBoard.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Config\Config.cpp">
@@ -173,10 +185,19 @@
     <ClInclude Include="Character\Fellows\Player.h">
       <Filter>ヘッダー ファイル\Character\Fellows</Filter>
     </ClInclude>
-    <ClInclude Include="Controller.h">
+    <ClInclude Include="InputDevice\InputDeviceManager.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDevice\Pad\JoyPad.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDevice\KeyBoard\KeyBoard.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Config\Config.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalTag.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

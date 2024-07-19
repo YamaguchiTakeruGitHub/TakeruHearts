@@ -17,17 +17,17 @@ Character::Player::~Player()
 void Character::Player::Init()
 {
 	//外部ファイル
-	std::ifstream inputfile("../Data/AllVariables/PlayerData.json", std::ios::binary);
+	std::ifstream padfile("../Data/AllVariables/PlayerData.json", std::ios::binary);
 
-	if (!inputfile.is_open()) { assert(inputfile); }
+	if (!padfile.is_open()) { assert(padfile); }
 
 	nlohmann::json jsonData;
 
-	inputfile >> jsonData;
+	padfile >> jsonData;
 
 	speed = jsonData["speed"];
 
-	inputfile.close();
+	padfile.close();
 
 	//各々初期化
 	modelHandle = MV1LoadModel("../Data/Asset/model/Knight.mv1");

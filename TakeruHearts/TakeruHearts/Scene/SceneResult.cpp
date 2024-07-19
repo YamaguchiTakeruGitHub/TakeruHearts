@@ -13,21 +13,25 @@ SceneResult::~SceneResult()
 void SceneResult::Init()
 {
 	DrawFormatString(0, 40, 0xffffff, "Result‰Šú‰»");
+	idm->Init();
 }
 
 void SceneResult::Update()
 {
 	DrawFormatString(0, 60, 0xffffff, "ResultXV");
+	idm->Update();
 }
 
 void SceneResult::Draw()
 {
 	DrawFormatString(0, 80, 0xffffff, "Result•`‰æ");
+	idm->Draw();
 }
 
 void SceneResult::End()
 {
 	DrawFormatString(0, 100, 0xffffff, "Result‰ğ•ú");
+	idm->End();
 }
 
 

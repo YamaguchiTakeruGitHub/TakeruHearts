@@ -7,6 +7,9 @@
 
 #include "CommonScene.h"
 
+
+
+
 //ポインタはアドレスを格納するための変数！
 
 struct GameConfig
@@ -19,21 +22,21 @@ struct GameConfig
 
 bool LoadConfig(const std::string& filename, GameConfig& config)
 {
-	std::ifstream inputfile(filename,std::ios::binary);
+	std::ifstream padfile(filename,std::ios::binary);
 
-	if (!inputfile.is_open())
+	if (!padfile.is_open())
 	{
 		return false;
 	}
 
 	nlohmann::json jsonData;
 
-	inputfile >> jsonData;
+	padfile >> jsonData;
 
 	config.screenHeight = jsonData["screenHeight"];
 	config.screenWidth = jsonData["screenWidth"];
 
-	inputfile.close();
+	padfile.close();
 
 	return true;
 }
@@ -52,10 +55,12 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	SetDrawScreen(DX_SCREEN_BACK);
 	//初期化（開始）
 
+
 	//構造体のインスタンス作成
 	SceneManager sceneManager(std::make_unique<SceneTitle>());
 
 	GameConfig config;
+
 
 	//LoadConfigで指定のパスが開けなかった場合は１を返す
 	if (!LoadConfig("../Data/AllVariables/GameConfig.json", config))
@@ -67,7 +72,8 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	SetGraphMode(config.screenWidth, config.screenHeight, true);
 	SetWindowSize(config.screenWidth, config.screenHeight);
 
-	
+
+
 
 	//初期化（終了）
 
@@ -85,6 +91,9 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 		sceneManager.HondleInput();
 		sceneManager.Update();
 		sceneManager.Draw();
+
+
+
 
 		//ゲーム処理（終了）
 

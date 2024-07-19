@@ -7,6 +7,8 @@ SceneManager::SceneManager(std::unique_ptr<SceneBase> initialScene) :
 	{
 		currentScene->Init();
 	}
+
+	
 }
 
 SceneManager::~SceneManager()
@@ -46,6 +48,7 @@ void SceneManager::HondleInput()
 
 void SceneManager::Init()
 {
+	
 	if (currentScene)
 	{
 		currentScene->Init();
@@ -54,6 +57,7 @@ void SceneManager::Init()
 
 void SceneManager::Update()
 {
+
 	if (currentScene)
 	{
 		currentScene->Update();
@@ -62,6 +66,7 @@ void SceneManager::Update()
 
 void SceneManager::Draw()
 {
+
 	if (currentScene)
 	{
 		currentScene->Draw();
@@ -70,6 +75,7 @@ void SceneManager::Draw()
 
 void SceneManager::End()
 {
+
 	if (currentScene)
 	{
 		currentScene->End();

@@ -2,6 +2,7 @@
 #include "../CommonScene.h"
 #include <memory>
 
+
 class SceneBase;
 class SceneManager
 {
