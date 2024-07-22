@@ -13,7 +13,12 @@ namespace Tag
 #endif
 	};
 
-
+	enum class UI
+	{
+		UI,
+		Button,
+		Image
+	};
 
 
 }

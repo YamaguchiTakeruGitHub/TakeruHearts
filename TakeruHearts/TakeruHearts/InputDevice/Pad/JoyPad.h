@@ -23,10 +23,10 @@ namespace InputDevice
 
 		/*十字キー*/
 		CROSSKEY = 0,
-		DUP = false,			//上
-		DRIGHT = false,			//右
-		DDOWN = false,			//下
-		DLEFT = false,			//左
+		DUP = 0,			//上
+		DRIGHT = 9000,			//右
+		DDOWN = 18000,			//下
+		DLEFT = 27000,			//左
 		DNONE = true			//何もしてない
 	};
 
@@ -44,6 +44,7 @@ namespace InputDevice
 		DINPUT_JOYSTATE pad;
 
 		int Pad1;
+		int count;
 	};
 }
 

@@ -145,6 +145,7 @@
     <ClCompile Include="Character\Fellows\Fellows.cpp" />
     <ClCompile Include="Character\Fellows\Player.cpp" />
     <ClCompile Include="Config\Config.cpp" />
+    <ClCompile Include="UI\Image\Image.cpp" />
     <ClCompile Include="InputDevice\InputDeviceManager.cpp" />
     <ClCompile Include="InputDevice\Pad\JoyPad.cpp" />
     <ClCompile Include="InputDevice\KeyBoard\KeyBoard.cpp" />
@@ -156,7 +157,6 @@
     <ClCompile Include="Scene\SceneGame.cpp" />
     <ClCompile Include="Scene\SceneBase.cpp" />
     <ClCompile Include="Scene\SceneTitle.cpp" />
-    <ClCompile Include="UI\UIData.cpp" />
     <ClCompile Include="UI\UI.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +167,7 @@
     <ClInclude Include="Character\Fellows\Fellows.h" />
     <ClInclude Include="Character\Fellows\Player.h" />
     <ClInclude Include="Config\Config.h" />
+    <ClInclude Include="UI\Image\Image.h" />
     <ClInclude Include="InputDevice\InputDeviceManager.h" />
     <ClInclude Include="InputDevice\Pad\JoyPad.h" />
     <ClInclude Include="InputDevice\KeyBoard\KeyBoard.h" />
@@ -180,7 +181,6 @@
     <ClInclude Include="Scene\SceneGame.h" />
     <ClInclude Include="Scene\SceneBase.h" />
     <ClInclude Include="Scene\SceneTitle.h" />
-    <ClInclude Include="UI\UIData.h" />
     <ClInclude Include="UI\UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -3,6 +3,7 @@
 InputDevice::JoyPad::JoyPad()
 	: pad()
 	, Pad1(GetJoypadInputState(DX_INPUT_PAD1))
+	, count(0)
 {
 }
 
@@ -13,6 +14,7 @@ InputDevice::JoyPad::~JoyPad()
 void InputDevice::JoyPad::Init()
 {
 	Pad1 = GetJoypadInputState(DX_INPUT_PAD1);
+	count = 0;
 }
 
 void InputDevice::JoyPad::Update()
@@ -20,52 +22,77 @@ void InputDevice::JoyPad::Update()
 	/*ボタン（start）*/
 
 	//Aボタン
-	if (Pad1 & pad.Buttons[PadButton::A])
+	if (pad.Buttons[PadButton::A])
 	{
 		//データの入る変数を作る
 		//コンフィグから変更したデータの内容を呼び出す
 	}
 	//Bボタン
-	if (Pad1 & pad.Buttons[PadButton::B])
+	if (pad.Buttons[PadButton::B])
 	{
 	}
 	//Yボタン
-	if (Pad1 & pad.Buttons[PadButton::Y])
+	if (pad.Buttons[PadButton::Y])
 	{
 	}
 	//Xボタン
-	if (Pad1 & pad.Buttons[PadButton::X])
+	if (pad.Buttons[PadButton::X])
 	{
 	}
 	//LBボタン
-	if (Pad1 & pad.Buttons[PadButton::LB])
+	if (pad.Buttons[PadButton::LB])
 	{
 	}
 	//RBボタン
-	if (Pad1 & pad.Buttons[PadButton::RB])
+	if (pad.Buttons[PadButton::RB])
 	{
 	}
 	//BACKボタン
-	if (Pad1 & pad.Buttons[PadButton::BACK])
+	if (pad.Buttons[PadButton::BACK])
 	{
 	}
 	//STARTボタン
-	if (Pad1 & pad.Buttons[PadButton::START])
+	if (pad.Buttons[PadButton::START])
 	{
 	}
 	//STICKLボタン
-	if (Pad1 & pad.Buttons[PadButton::STICKL])
+	if (pad.Buttons[PadButton::STICKL])
 	{
 	}
 	//STICKRボタン
-	if (Pad1 & pad.Buttons[PadButton::STICKR])
+	if (pad.Buttons[PadButton::STICKR])
 	{
 	}
 
+	
+
+
 	/*ボタン（end）*/
 
-	/*銃時期（start）*/
-	
+	/*十字キー（start）*/
+	switch (pad.POV[PadButton::CROSSKEY])
+	{
+	case PadButton::DUP://上
+		count++;
+		break;
+
+	case PadButton::DRIGHT://右
+		count = 0;
+		break;
+
+	case PadButton::DDOWN://下
+		count--;
+		break;
+
+	case PadButton::DLEFT://左
+		count = 1000;
+		break;
+
+	default:
+		break;
+	}
+	/*十字キー（end）*/
+
 
 }
 
@@ -75,6 +102,9 @@ void InputDevice::JoyPad::Draw()
 {
 	// 入力状態を取得
 #if _DEBUG
+	DrawFormatString(100, 100, 0xffffff, "%d", count);
+
+
 	int i;
 	int Color;
 
