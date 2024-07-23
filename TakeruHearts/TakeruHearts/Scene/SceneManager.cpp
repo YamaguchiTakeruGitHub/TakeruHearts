@@ -7,8 +7,6 @@ SceneManager::SceneManager(std::unique_ptr<SceneBase> initialScene) :
 	{
 		currentScene->Init();
 	}
-
-	
 }
 
 SceneManager::~SceneManager()

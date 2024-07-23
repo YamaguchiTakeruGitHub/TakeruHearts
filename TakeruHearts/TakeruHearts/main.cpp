@@ -44,6 +44,7 @@ bool LoadConfig(const std::string& filename, GameConfig& config)
 
 int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
 {
+	SetWindowText("TakeruHearts");
 
 	ChangeWindowMode(true);
 
@@ -53,11 +54,14 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	}
 	
 	SetDrawScreen(DX_SCREEN_BACK);
-	//初期化（開始）
 
+
+	//初期化（開始）
 
 	//構造体のインスタンス作成
 	SceneManager sceneManager(std::make_unique<SceneTitle>());
+
+	sceneManager.Init();
 
 	GameConfig config;
 
@@ -69,10 +73,8 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	}
 
 	//ウィンドウ画面の調整
-	SetGraphMode(config.screenWidth, config.screenHeight, true);
+	SetGraphMode(config.screenWidth, config.screenHeight,16);
 	SetWindowSize(config.screenWidth, config.screenHeight);
-
-
 
 
 	//初期化（終了）
@@ -91,8 +93,6 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 		sceneManager.HondleInput();
 		sceneManager.Update();
 		sceneManager.Draw();
-
-
 
 
 		//ゲーム処理（終了）

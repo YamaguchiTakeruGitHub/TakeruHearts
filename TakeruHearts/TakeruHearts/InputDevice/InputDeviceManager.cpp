@@ -6,24 +6,28 @@ using namespace InputDevice;
 InputDeviceManager::InputDeviceManager()
 {
 	joypad = new JoyPad;
-	keyboard = new KeyBoard;
+	//keyboard = new KeyBoard;
 }
 
 InputDeviceManager::~InputDeviceManager()
 {
-	End();
+	joypad = nullptr;
+	delete joypad;
+
+	//keyboard = nullptr;
+	//delete keyboard;
 }
 
 void InputDeviceManager::Init()
 {
 	joypad->Init();
-	keyboard->Init();
+//keyboard->Init();
 }
 
 void InputDeviceManager::Update()
 {
 	joypad->Update();
-	keyboard->Update();
+	//keyboard->Update();
 }
 
 void InputDevice::InputDeviceManager::Draw()
@@ -36,6 +40,6 @@ void InputDeviceManager::End()
 	joypad = nullptr;
 	delete joypad;
 
-	keyboard = nullptr;
-	delete keyboard;
+	//keyboard = nullptr;
+	//delete keyboard;
 }

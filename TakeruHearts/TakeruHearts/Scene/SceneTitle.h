@@ -13,8 +13,36 @@ public:
 	void Update();
 	void Draw();
 	void End();
-
 	
+private:
+	int imgBG;
+	
+	int nowSelect;
+
+	int buttonPoint;
+
+	VECTOR buttonPointPos;
+
+	VECTOR NewGamePos;
+	VECTOR LoadGamePos;
+	VECTOR BackPos;
+
+	int pushNow;
+	int pushBefore;
+
+
+
+	typedef enum 
+	{
+		eMenu_NewGame,
+		eMenu_LoadGame,
+		eMenu_Back,
+
+		eMenu_Num,
+
+	}eMenu;
+
+
 
 };
 

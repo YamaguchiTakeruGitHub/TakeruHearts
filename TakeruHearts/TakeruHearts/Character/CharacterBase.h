@@ -1,7 +1,7 @@
 #pragma once
 #include "../TKRLib/Rigidbody.h"
 #include "../Status/StatusMaster.h"
-#include "../Animation/AnimationManager.h"
+
 
 namespace Character
 {
@@ -16,8 +16,7 @@ namespace Character
 
 	protected:
 		TKRLib::Rigidbody rigidbody;
-		/*Status::StatusMaster status;
-		Animation::AnimationManager animManager;*/
+		
 
 		int modelHandle;
 		

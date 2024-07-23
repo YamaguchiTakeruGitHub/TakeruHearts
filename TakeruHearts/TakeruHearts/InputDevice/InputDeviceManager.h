@@ -16,7 +16,7 @@ namespace InputDevice
 		void End();
 		
 		JoyPad* joypad;
-		KeyBoard* keyboard;
+		//KeyBoard* keyboard;
 
 	};
 }

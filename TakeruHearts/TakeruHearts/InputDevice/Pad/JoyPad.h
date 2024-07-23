@@ -45,6 +45,26 @@ namespace InputDevice
 
 		int Pad1;
 		int count;
+
+	public:
+		bool isA;
+		bool isB;
+		bool isX;
+		bool isY;
+		bool isLB;
+		bool isRB;
+		bool isBACK;
+		bool isSTART;
+		bool isSTICKL;
+		bool isSTICKR;
+
+		bool isDUP;
+		bool isDRIGHT;
+		bool isDDOWN;
+		bool isDLEFT;
+
+
+
 	};
 }
 

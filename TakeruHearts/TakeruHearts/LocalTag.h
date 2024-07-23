@@ -20,5 +20,14 @@ namespace Tag
 		Image
 	};
 
+	enum class Map
+	{
+		TutorialMap
+	};
+
+	enum class obj
+	{
+
+	};
 
 }

@@ -102,20 +102,11 @@
     <ClCompile Include="TKRLib\Rigidbody.cpp">
       <Filter>ソース ファイル\TKRLib</Filter>
     </ClCompile>
-    <ClCompile Include="Animation\AnimationManager.cpp">
-      <Filter>ソース ファイル\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="Animation\AnimationDataPlayer.cpp">
-      <Filter>ソース ファイル\Animation</Filter>
-    </ClCompile>
     <ClCompile Include="Character\Fellows\Fellows.cpp">
       <Filter>ソース ファイル\Character\Fellows</Filter>
     </ClCompile>
     <ClCompile Include="Character\Fellows\Player.cpp">
       <Filter>ソース ファイル\Character\Fellows</Filter>
-    </ClCompile>
-    <ClCompile Include="UI\UI.cpp">
-      <Filter>ソース ファイル\UI</Filter>
     </ClCompile>
     <ClCompile Include="InputDevice\InputDeviceManager.cpp">
       <Filter>ソース ファイル</Filter>
@@ -130,6 +121,12 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="UI\Image\Image.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation\AnimationManager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Button\Button.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -164,18 +161,6 @@
     <ClInclude Include="TKRLib\Rigidbody.h">
       <Filter>ヘッダー ファイル\TKRLib</Filter>
     </ClInclude>
-    <ClInclude Include="Animation\AnimationManager.h">
-      <Filter>ヘッダー ファイル\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="Animation\AnimData.h">
-      <Filter>ヘッダー ファイル\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="Animation\AnimationDataPlayer.h">
-      <Filter>ヘッダー ファイル\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="UI\UI.h">
-      <Filter>ヘッダー ファイル\UI</Filter>
-    </ClInclude>
     <ClInclude Include="Character\Fellows\Fellows.h">
       <Filter>ヘッダー ファイル\Character\Fellows</Filter>
     </ClInclude>
@@ -198,6 +183,12 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="UI\Image\Image.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation\AnimationManager.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Button\Button.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
