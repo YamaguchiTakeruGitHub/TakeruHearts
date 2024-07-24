@@ -13,8 +13,10 @@
 		virtual void Draw() = 0;
 		virtual void End() = 0;
 
+
 	protected:
 		InputDevice::InputDeviceManager* idm;
+
 
 	};
 

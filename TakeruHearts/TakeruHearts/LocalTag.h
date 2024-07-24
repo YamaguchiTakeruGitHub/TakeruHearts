@@ -27,7 +27,8 @@ namespace Tag
 
 	enum class obj
 	{
-
+		Player,
+		Enemy,
 	};
 
 }

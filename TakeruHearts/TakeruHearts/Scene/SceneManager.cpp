@@ -1,7 +1,8 @@
 #include "SceneManager.h"
 
-SceneManager::SceneManager(std::unique_ptr<SceneBase> initialScene) :
-	currentScene(std::move(initialScene))//initialSceneにcurrentSceneの所有権を渡す
+SceneManager::SceneManager(std::unique_ptr<SceneBase> initialScene)
+	: currentScene(std::move(initialScene))//initialSceneにcurrentSceneの所有権を渡す
+	, count(0)
 {
 	if (currentScene)
 	{
@@ -11,6 +12,7 @@ SceneManager::SceneManager(std::unique_ptr<SceneBase> initialScene) :
 
 SceneManager::~SceneManager()
 {
+
 	currentScene.reset();//CurrentSceneのリソースを解放
 }
 
@@ -29,6 +31,11 @@ void SceneManager::SetScene(std::unique_ptr<SceneBase> scene)
 
 void SceneManager::HondleInput()
 {
+	if(count == 10)
+	{
+		SetScene(std::make_unique<SceneTitle>());//同じく
+	}
+
 	if (CheckHitKey(KEY_INPUT_T) != 0)
 	{
 		SetScene(std::make_unique<SceneGame>());//新しいインスタンスを生成しunique_ptrに渡す
@@ -55,6 +62,11 @@ void SceneManager::Init()
 
 void SceneManager::Update()
 {
+	count++;
+	if (count == 10)
+	{
+		count = 10;
+	}
 
 	if (currentScene)
 	{

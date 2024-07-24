@@ -73,6 +73,30 @@
     <Filter Include="ヘッダー ファイル\Config">
       <UniqueIdentifier>{67d8a88c-7af3-4ea8-958f-fab6f2b6d1ae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\InputDevice">
+      <UniqueIdentifier>{0f0832b5-20d3-4f1f-9555-a8dda91659b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\InputDevice\Pad">
+      <UniqueIdentifier>{466dc001-840d-4e78-86b4-517a21adb0dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\InputDevice\KeyBoard">
+      <UniqueIdentifier>{5e847667-3e72-4e7d-87a7-570c91607e37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\UI\Image">
+      <UniqueIdentifier>{c8e84030-fd8b-4e30-864f-c6939ae4af26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\UI\Image">
+      <UniqueIdentifier>{f34cc096-64e5-441e-977f-fdaa440c216f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\InputDevice">
+      <UniqueIdentifier>{6ef28ac4-42f7-4fbe-8856-93d82fb5d5dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\InputDevice\Pad">
+      <UniqueIdentifier>{889bb834-c361-49d5-8f56-1f51704053bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\InputDevice\KeyBoard">
+      <UniqueIdentifier>{357a2c72-6989-457a-94bd-0bb93fe6e33d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -108,26 +132,35 @@
     <ClCompile Include="Character\Fellows\Player.cpp">
       <Filter>ソース ファイル\Character\Fellows</Filter>
     </ClCompile>
-    <ClCompile Include="InputDevice\InputDeviceManager.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="InputDevice\Pad\JoyPad.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="InputDevice\KeyBoard\KeyBoard.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Config\Config.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="UI\Image\Image.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Animation\AnimationManager.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDevice\InputDeviceManager.cpp">
+      <Filter>ソース ファイル\InputDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDevice\Pad\JoyPad.cpp">
+      <Filter>ソース ファイル\InputDevice\Pad</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDevice\KeyBoard\KeyBoard.cpp">
+      <Filter>ソース ファイル\InputDevice\KeyBoard</Filter>
     </ClCompile>
     <ClCompile Include="UI\Button\Button.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\UI\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Image\Image.cpp">
+      <Filter>ソース ファイル\UI\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="TKRLib\Collidable.cpp">
+      <Filter>ソース ファイル\TKRLib</Filter>
+    </ClCompile>
+    <ClCompile Include="TKRLib\ColliderData.cpp">
+      <Filter>ソース ファイル\TKRLib</Filter>
+    </ClCompile>
+    <ClCompile Include="TKRLib\Physics.cpp">
+      <Filter>ソース ファイル\TKRLib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -167,29 +200,38 @@
     <ClInclude Include="Character\Fellows\Player.h">
       <Filter>ヘッダー ファイル\Character\Fellows</Filter>
     </ClInclude>
-    <ClInclude Include="InputDevice\InputDeviceManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="InputDevice\Pad\JoyPad.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="InputDevice\KeyBoard\KeyBoard.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Config\Config.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="LocalTag.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="UI\Image\Image.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Animation\AnimationManager.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="TKRLib\Collidable.h">
+      <Filter>ヘッダー ファイル\TKRLib</Filter>
+    </ClInclude>
+    <ClInclude Include="TKRLib\ColliderData.h">
+      <Filter>ヘッダー ファイル\TKRLib</Filter>
+    </ClInclude>
+    <ClInclude Include="TKRLib\Physics.h">
+      <Filter>ヘッダー ファイル\TKRLib</Filter>
     </ClInclude>
     <ClInclude Include="UI\Button\Button.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\UI\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Image\Image.h">
+      <Filter>ヘッダー ファイル\UI\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDevice\InputDeviceManager.h">
+      <Filter>ヘッダー ファイル\InputDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDevice\Pad\JoyPad.h">
+      <Filter>ヘッダー ファイル\InputDevice\Pad</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDevice\KeyBoard\KeyBoard.h">
+      <Filter>ヘッダー ファイル\InputDevice\KeyBoard</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

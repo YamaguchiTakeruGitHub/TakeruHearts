@@ -17,4 +17,8 @@ void TKRLib::Rigidbody::Init()
 void TKRLib::Rigidbody::SetVel(const VECTOR& set)
 {
 	velocity = set;
+	if (VSquareSize(velocity) > 0)
+	{
+		direction = VNorm(velocity);
+	}
 }

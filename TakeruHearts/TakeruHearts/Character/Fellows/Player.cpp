@@ -38,12 +38,16 @@ void Character::Player::Init()
 
 void Character::Player::Update()
 {
+	MV1SetPosition(modelHandle, rigidbody.GetPos());
+
 }
 
 void Character::Player::Draw()
 {
+	MV1DrawModel(modelHandle);
 }
 
 void Character::Player::End()
 {
+	MV1DeleteModel(modelHandle);
 }

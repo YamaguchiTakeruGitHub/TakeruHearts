@@ -21,7 +21,8 @@ public:
 	void Update();
 	void Draw();
 	void End();
-		
+
+	int count;
 
 };
 

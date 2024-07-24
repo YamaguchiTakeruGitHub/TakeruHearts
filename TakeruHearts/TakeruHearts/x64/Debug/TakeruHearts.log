@@ -1,9 +1,21 @@
-﻿  SceneManager.cpp
+﻿  InputDeviceManager.cpp
+C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  JoyPad.cpp
+C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  SceneBase.cpp
+C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  SceneGame.cpp
+C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  SceneManager.cpp
+C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  SceneResult.cpp
 C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   SceneTitle.cpp
 C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\TakeruHearts\Scene\SceneTitle.cpp(108,44): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\TakeruHearts\Scene\SceneTitle.cpp(108,26): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\TakeruHearts\Scene\SceneTitle.cpp(31,2): warning C4102: 'imgBG': ラベルは 1 度も参照されません。
+C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\TakeruHearts\Scene\SceneTitle.cpp(32,2): warning C4102: 'buttonPoint': ラベルは 1 度も参照されません。
+C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\TakeruHearts\Scene\SceneTitle.cpp(122,44): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\TakeruHearts\Scene\SceneTitle.cpp(122,26): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
   main.cpp
 C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   コードを生成中...

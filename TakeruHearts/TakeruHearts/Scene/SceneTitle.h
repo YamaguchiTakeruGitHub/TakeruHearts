@@ -1,7 +1,6 @@
 #pragma once
 #include "SceneBase.h"
 
-
 class SceneTitle final
 	: public SceneBase
 {
@@ -13,11 +12,16 @@ public:
 	void Update();
 	void Draw();
 	void End();
+
+	
 	
 private:
 	int imgBG;
 	
 	int nowSelect;
+	bool isDUPButtonPressed;
+	bool isDDOWNButtonPressed;
+
 
 	int buttonPoint;
 

@@ -47,6 +47,7 @@ namespace InputDevice
 		int count;
 
 	public:
+
 		bool isA;
 		bool isB;
 		bool isX;
@@ -62,8 +63,6 @@ namespace InputDevice
 		bool isDRIGHT;
 		bool isDDOWN;
 		bool isDLEFT;
-
-
 
 	};
 }

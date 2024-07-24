@@ -124,7 +124,6 @@ void InputDevice::JoyPad::Update()
 		isSTICKR = true;
 	}
 
-	
 
 
 	/*ボタン（end）*/
@@ -157,14 +156,16 @@ void InputDevice::JoyPad::Update()
 	}
 	/*十字キー（end）*/
 
-
 }
 
 
 
 void InputDevice::JoyPad::Draw()
 {
-	// 入力状態を取得
+	//入力を取得
+	GetJoypadDirectInputState(DX_INPUT_PAD1, &pad);
+
+
 #if _DEBUG
 	DrawFormatString(100, 100, 0xffffff, "%d", count);
 
@@ -172,7 +173,6 @@ void InputDevice::JoyPad::Draw()
 	int i;
 	int Color;
 
-	GetJoypadDirectInputState(DX_INPUT_PAD1, &pad);
 
 	// 画面に構造体の中身を描画
 	Color = GetColor(255, 255, 255);
@@ -195,3 +195,4 @@ void InputDevice::JoyPad::Draw()
 #endif
 
 }
+

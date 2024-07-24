@@ -2,16 +2,17 @@
 
 
 SceneTitle::SceneTitle()
-	: imgBG				(-1)
-	, buttonPoint		(-1)
-	, nowSelect			()
-	, buttonPointPos	()
-	, NewGamePos		()
-	, LoadGamePos		()
-	, BackPos			()
-	, pushBefore		()
-	, pushNow			()
-	
+	: imgBG					(LoadGraph("../Data/Asset/img/TitleButtonRogo.png"))
+	, buttonPoint			(LoadGraph("../Data/Asset/img/buttonPoint.png"))
+	, nowSelect				()
+	, buttonPointPos		()
+	, NewGamePos			()
+	, LoadGamePos			()
+	, BackPos				()
+	, pushBefore			()
+	, pushNow				()
+	, isDUPButtonPressed	()
+	,isDDOWNButtonPressed	()
 {
 	DrawFormatString(0, 0, 0xffffff, "titleデストラクタ");
 }
@@ -27,17 +28,19 @@ void SceneTitle::Init()
 {
 	DrawFormatString(0, 40, 0xffffff, "title初期化");
 	idm->Init();
-	imgBG			= LoadGraph("../Data/Asset/img/TitleButtonRogo.png");
-	buttonPoint		= LoadGraph("../Data/Asset/img/buttonPoint.png");
+	imgBG:			/*= LoadGraph("../Data/Asset/img/TitleButtonRogo.png");*/
+	buttonPoint	:	/*= LoadGraph("../Data/Asset/img/buttonPoint.png");*/
 	buttonPointPos	= VGet(124.0f, 486.0f, 0.0f);
 	NewGamePos		= VGet(124.0f, 486.0f, 0.0f);
 	LoadGamePos		= VGet(124.0f, 553.0f, 0.0f);
 	BackPos			= VGet(124.0f, 621.0f, 0.0f);
 
-	nowSelect = eMenu_NewGame;
+	nowSelect = eMenu_LoadGame;
 
 	pushBefore = 0;
 	pushNow = 0;
+	isDUPButtonPressed = false;
+	isDDOWNButtonPressed = false;
 }
 
 void SceneTitle::Update()
@@ -45,19 +48,34 @@ void SceneTitle::Update()
 	DrawFormatString(0, 60, 0xffffff, "title更新");
 	idm->Update();
 
+	
 
-
-	//上が押されている時
-	if (idm->joypad->isDUP == true)
+	//上が押された瞬間
+	if (idm->joypad->isDUP == true && !isDUPButtonPressed)
 	{
+		isDUPButtonPressed = true;
+
 		nowSelect = (nowSelect + (eMenu_Num - 1)) % eMenu_Num;
 		pushNow = 1;
 	}
-	if (idm->joypad->isDDOWN == true)
+	if (!idm->joypad->isDUP)
 	{
+		isDUPButtonPressed = false;
+	}
+	//下が押された瞬間
+	if (idm->joypad->isDDOWN == true && !isDDOWNButtonPressed)
+	{
+		isDDOWNButtonPressed = true;
+
 		nowSelect = (nowSelect + 1) % eMenu_Num;
 		pushNow = 1;
 	}
+	if (!idm->joypad->isDDOWN)
+	{
+		isDDOWNButtonPressed = false;
+	}
+
+
 
 	//選択した項目をAボタンで実行
 	if (idm->joypad->isA == true)
@@ -71,6 +89,7 @@ void SceneTitle::Update()
 			break;
 		
 		case eMenu_Back:
+			DxLib_End();
 			break;
 		}
 	}
@@ -98,7 +117,12 @@ void SceneTitle::Draw()
 	idm->Draw();
 	DrawGraph(0,0,imgBG, true);
 
+
+
 	DrawGraph(buttonPointPos.x, buttonPointPos.y, buttonPoint, true);
+
+
+
 
 	DrawFormatString(100, 100, 0x000000, "x %f, y %f", buttonPointPos.x, buttonPointPos.y);
 

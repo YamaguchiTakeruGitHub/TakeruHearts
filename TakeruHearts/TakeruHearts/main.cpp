@@ -57,13 +57,11 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 
 
 	//初期化（開始）
-
 	//構造体のインスタンス作成
+	GameConfig config;
 	SceneManager sceneManager(std::make_unique<SceneTitle>());
 
 	sceneManager.Init();
-
-	GameConfig config;
 
 
 	//LoadConfigで指定のパスが開けなかった場合は１を返す
@@ -90,10 +88,10 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 
 		//ゲーム処理（開始）
 
-		sceneManager.HondleInput();
+		
 		sceneManager.Update();
 		sceneManager.Draw();
-
+		sceneManager.HondleInput();
 
 		//ゲーム処理（終了）
 
