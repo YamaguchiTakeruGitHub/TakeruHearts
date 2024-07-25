@@ -8,8 +8,8 @@ namespace TKRLib
 	class Physics final
 	{
 	public:
-		void Entry(const Collidable* collidable);
-		void Exit(const Collidable* collidable);
+		void Entry(Collidable* collidable);
+		void Exit(Collidable* collidable);
 
 		void Update();
 

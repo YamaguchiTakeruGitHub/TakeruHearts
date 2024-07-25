@@ -28,8 +28,8 @@ void SceneTitle::Init()
 {
 	DrawFormatString(0, 40, 0xffffff, "title‰Šú‰»");
 	idm->Init();
-	imgBG:			/*= LoadGraph("../Data/Asset/img/TitleButtonRogo.png");*/
-	buttonPoint	:	/*= LoadGraph("../Data/Asset/img/buttonPoint.png");*/
+	imgBG;
+	buttonPoint;
 	buttonPointPos	= VGet(124.0f, 486.0f, 0.0f);
 	NewGamePos		= VGet(124.0f, 486.0f, 0.0f);
 	LoadGamePos		= VGet(124.0f, 553.0f, 0.0f);

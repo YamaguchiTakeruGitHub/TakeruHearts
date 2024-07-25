@@ -18,6 +18,22 @@ InputDevice::JoyPad::JoyPad()
 	, isDRIGHT(false)
 	, isDDOWN(false)
 	, isDLEFT(false)
+
+	, pisA(false)
+	, pisB(false)
+	, pisX(false)
+	, pisY(false)
+	, pisLB(false)
+	, pisRB(false)
+	, pisBACK(false)
+	, pisSTART(false)
+	, pisSTICKL(false)
+	, pisSTICKR(false)
+
+	, pisDUP(false)
+	, pisDRIGHT(false)
+	, pisDDOWN(false)
+	, pisDLEFT(false)
 {
 }
 
@@ -45,6 +61,24 @@ void InputDevice::JoyPad::Init()
 	isDRIGHT = false;
 	isDDOWN = false;
 	isDLEFT = false;
+
+	pisA = false;
+	pisB = false;
+	pisX = false;
+	pisY = false;
+	pisLB = false;
+	pisRB = false;
+	pisBACK = false;
+	pisSTART = false;
+	pisSTICKL = false;
+	pisSTICKR = false;
+
+	pisDUP = false;
+	pisDRIGHT = false;
+	pisDDOWN = false;
+	pisDLEFT = false;
+
+
 }
 
 void InputDevice::JoyPad::Update()
@@ -72,57 +106,66 @@ void InputDevice::JoyPad::Update()
 	/*ボタン（start）*/
 
 	//Aボタン
-	if (pad.Buttons[PadButton::A])
+	if (pad.Buttons[PadButton::A] && !pisA)
 	{
-		//データの入る変数を作る
-		//コンフィグから変更したデータの内容を呼び出す
-		isA = true;
+		pisA = true;
+		isA = true;//別クラスで判定する用のフラグ
 	}
 	//Bボタン
 	if (pad.Buttons[PadButton::B])
 	{
-		isB = true;
+		pisB = true;
+		isB = true;//別クラスで判定する用のフラグ
 	}
 	//Yボタン
 	if (pad.Buttons[PadButton::Y])
 	{
-		isY = true;
+		pisY = true;
+		isY = true;//別クラスで判定する用のフラグ
 	}
 	//Xボタン
 	if (pad.Buttons[PadButton::X])
 	{
-		isX = true;
+		isX = true;//別クラスで判定する用のフラグ
 	}
 	//LBボタン
 	if (pad.Buttons[PadButton::LB])
 	{
-		isLB = true;
+		isLB = true;//別クラスで判定する用のフラグ
 	}
 	//RBボタン
 	if (pad.Buttons[PadButton::RB])
 	{
-		isRB = true;
+		isRB = true;//別クラスで判定する用のフラグ
 	}
 	//BACKボタン
 	if (pad.Buttons[PadButton::BACK])
 	{
-		isBACK = true;
+		isBACK = true;//別クラスで判定する用のフラグ
 	}
 	//STARTボタン
 	if (pad.Buttons[PadButton::START])
 	{
-		isSTART = true;
+		isSTART = true;//別クラスで判定する用のフラグ
 	}
 	//STICKLボタン
 	if (pad.Buttons[PadButton::STICKL])
 	{
-		isSTICKL = true;
+		isSTICKL = true;//別クラスで判定する用のフラグ
 	}
 	//STICKRボタン
 	if (pad.Buttons[PadButton::STICKR])
 	{
-		isSTICKR = true;
+		isSTICKR = true;//別クラスで判定する用のフラグ
 	}
+
+	//特定のボタンが押されていない時はフラグをおろす
+	if (!pad.Buttons[PadButton::A])
+	{
+		pisA = false;
+	}
+
+
 
 
 
@@ -133,22 +176,22 @@ void InputDevice::JoyPad::Update()
 	{
 	case PadButton::DUP://上
 		count++;
-		isDUP = true;
+		isDUP = true;//別クラスで判定する用のフラグ
 		break;
 
 	case PadButton::DRIGHT://右
 		count = 0;
-		isDRIGHT = true;
+		isDRIGHT = true;//別クラスで判定する用のフラグ
 		break;
 
 	case PadButton::DDOWN://下
 		count--;
-		isDDOWN = true;
+		isDDOWN = true;//別クラスで判定する用のフラグ
 		break;
 
 	case PadButton::DLEFT://左
 		count = 1000;
-		isDLEFT = true;
+		isDLEFT = true;//別クラスで判定する用のフラグ
 		break;
 
 	default:

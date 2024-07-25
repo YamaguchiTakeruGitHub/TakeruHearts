@@ -46,8 +46,10 @@ namespace InputDevice
 		int Pad1;
 		int count;
 
+	
 	public:
 
+		//別クラスで判定する用のフラグ
 		bool isA;
 		bool isB;
 		bool isX;
@@ -63,6 +65,25 @@ namespace InputDevice
 		bool isDRIGHT;
 		bool isDDOWN;
 		bool isDLEFT;
+	
+
+	private:
+		
+		bool pisA;
+		bool pisB;
+		bool pisX;
+		bool pisY;
+		bool pisLB;
+		bool pisRB;
+		bool pisBACK;
+		bool pisSTART;
+		bool pisSTICKL;
+		bool pisSTICKR;
+
+		bool pisDUP;
+		bool pisDRIGHT;
+		bool pisDDOWN;
+		bool pisDLEFT;
 
 	};
 }

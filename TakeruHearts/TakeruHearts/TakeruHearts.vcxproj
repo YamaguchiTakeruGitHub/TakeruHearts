@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Effect\2D\FadeInAndFadeOut.cpp" />
+    <ClCompile Include="Object\ObjctBase.cpp" />
     <ClCompile Include="Object\Fellow\Player.cpp" />
     <ClCompile Include="TKRLib\Rigidbody.cpp" />
     <ClCompile Include="TKRLib\Collidable.cpp" />
@@ -160,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Effect\2D\FadeInAndFadeOut.h" />
+    <ClInclude Include="Object\ObjctBase.h" />
     <ClInclude Include="Object\Fellow\Player.h" />
     <ClInclude Include="TKRLib\Rigidbody.h" />
     <ClInclude Include="TKRLib\Collidable.h" />
