@@ -139,20 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Animation\AnimationManager.cpp" />
-    <ClCompile Include="TKRLib\Physics.cpp" />
+    <ClCompile Include="Effect\2D\FadeInAndFadeOut.cpp" />
+    <ClCompile Include="Object\Fellow\Player.cpp" />
+    <ClCompile Include="TKRLib\Rigidbody.cpp" />
     <ClCompile Include="TKRLib\Collidable.cpp" />
-    <ClCompile Include="TKRLib\ColliderData.cpp" />
+    <ClCompile Include="TKRLib\Physics.cpp" />
     <ClCompile Include="UI\Button\Button.cpp" />
-    <ClCompile Include="Character\CharacterBase.cpp" />
-    <ClCompile Include="Character\Fellows\Fellows.cpp" />
-    <ClCompile Include="Character\Fellows\Player.cpp" />
     <ClCompile Include="Config\Config.cpp" />
     <ClCompile Include="UI\Image\Image.cpp" />
     <ClCompile Include="InputDevice\InputDeviceManager.cpp" />
     <ClCompile Include="InputDevice\Pad\JoyPad.cpp" />
     <ClCompile Include="InputDevice\KeyBoard\KeyBoard.cpp" />
-    <ClCompile Include="TKRLib\Rigidbody.cpp" />
     <ClCompile Include="Status\StatusMaster.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
@@ -162,23 +159,20 @@
     <ClCompile Include="Scene\SceneTitle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Animation\AnimationManager.h" />
-    <ClInclude Include="TKRLib\Physics.h" />
+    <ClInclude Include="Effect\2D\FadeInAndFadeOut.h" />
+    <ClInclude Include="Object\Fellow\Player.h" />
+    <ClInclude Include="TKRLib\Rigidbody.h" />
     <ClInclude Include="TKRLib\Collidable.h" />
-    <ClInclude Include="TKRLib\ColliderData.h" />
+    <ClInclude Include="TKRLib\Physics.h" />
+    <ClInclude Include="TKRLib\TKRLib.h" />
     <ClInclude Include="UI\Button\Button.h" />
-    <ClInclude Include="Character\CharacterBase.h" />
-    <ClInclude Include="Character\Fellows\Fellows.h" />
-    <ClInclude Include="Character\Fellows\Player.h" />
     <ClInclude Include="Config\Config.h" />
     <ClInclude Include="UI\Image\Image.h" />
     <ClInclude Include="InputDevice\InputDeviceManager.h" />
     <ClInclude Include="InputDevice\Pad\JoyPad.h" />
     <ClInclude Include="InputDevice\KeyBoard\KeyBoard.h" />
     <ClInclude Include="LocalTag.h" />
-    <ClInclude Include="TKRLib\Rigidbody.h" />
     <ClInclude Include="Status\StatusMaster.h" />
-    <ClInclude Include="TKRLib\TKRLib.h" />
     <ClInclude Include="CommonScene.h" />
     <ClInclude Include="Scene\SceneManager.h" />
     <ClInclude Include="Scene\SceneResult.h" />

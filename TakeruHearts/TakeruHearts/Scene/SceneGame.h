@@ -1,8 +1,10 @@
 #pragma once
 #include "SceneBase.h"
-#include "../Character/Fellows/Player.h"
+#include "../TKRLib\TKRLib.h"
+#include "../Object/Fellow/Player.h"
 
-class Character::Player;
+
+
 class SceneGame final
 	: public SceneBase
 {
@@ -16,7 +18,8 @@ public:
 	void End();
 
 private:
-	Character::Player* m_player;
+	TKRLib::Physics* physics;
+	Player* player;
 
 };
 

@@ -31,24 +31,6 @@
     <Filter Include="ヘッダー ファイル\UI\Button">
       <UniqueIdentifier>{ebb5b918-2927-4ebb-b1a7-dd521e0d6573}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル\Character">
-      <UniqueIdentifier>{ac7fa4f3-d367-4e5c-a460-9bc63d33ae1b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Character">
-      <UniqueIdentifier>{c0d71863-f5ce-413e-afe3-34316405c4a0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Character\Fellows">
-      <UniqueIdentifier>{a8e7d1e9-51c6-4f9c-8011-80d39134bc0a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Character\Fellows">
-      <UniqueIdentifier>{1e3d6722-e20d-4190-8d8c-1edf68685f63}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Character\Enemy">
-      <UniqueIdentifier>{a9fe5bb4-9757-411a-bbbc-faaafab5a804}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Character\Enemy">
-      <UniqueIdentifier>{8e7fe65e-ef57-447c-b951-9c710887c531}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Status">
       <UniqueIdentifier>{72029450-50ff-48d6-b3ba-392223c224f0}</UniqueIdentifier>
     </Filter>
@@ -117,26 +99,11 @@
     <ClCompile Include="Scene\SceneManager.cpp">
       <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Character\CharacterBase.cpp">
-      <Filter>ソース ファイル\Character</Filter>
-    </ClCompile>
     <ClCompile Include="Status\StatusMaster.cpp">
       <Filter>ソース ファイル\Status</Filter>
     </ClCompile>
-    <ClCompile Include="TKRLib\Rigidbody.cpp">
-      <Filter>ソース ファイル\TKRLib</Filter>
-    </ClCompile>
-    <ClCompile Include="Character\Fellows\Fellows.cpp">
-      <Filter>ソース ファイル\Character\Fellows</Filter>
-    </ClCompile>
-    <ClCompile Include="Character\Fellows\Player.cpp">
-      <Filter>ソース ファイル\Character\Fellows</Filter>
-    </ClCompile>
     <ClCompile Include="Config\Config.cpp">
       <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Animation\AnimationManager.cpp">
-      <Filter>ソース ファイル\Animation</Filter>
     </ClCompile>
     <ClCompile Include="InputDevice\InputDeviceManager.cpp">
       <Filter>ソース ファイル\InputDevice</Filter>
@@ -153,14 +120,20 @@
     <ClCompile Include="UI\Image\Image.cpp">
       <Filter>ソース ファイル\UI\Image</Filter>
     </ClCompile>
-    <ClCompile Include="TKRLib\Collidable.cpp">
-      <Filter>ソース ファイル\TKRLib</Filter>
-    </ClCompile>
-    <ClCompile Include="TKRLib\ColliderData.cpp">
-      <Filter>ソース ファイル\TKRLib</Filter>
-    </ClCompile>
     <ClCompile Include="TKRLib\Physics.cpp">
-      <Filter>ソース ファイル\TKRLib</Filter>
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="TKRLib\Collidable.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="TKRLib\Rigidbody.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect\2D\FadeInAndFadeOut.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Fellow\Player.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -182,41 +155,14 @@
     <ClInclude Include="Scene\SceneManager.h">
       <Filter>ヘッダー ファイル\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Character\CharacterBase.h">
-      <Filter>ヘッダー ファイル\Character</Filter>
-    </ClInclude>
     <ClInclude Include="Status\StatusMaster.h">
       <Filter>ヘッダー ファイル\Status</Filter>
-    </ClInclude>
-    <ClInclude Include="TKRLib\TKRLib.h">
-      <Filter>ヘッダー ファイル\TKRLib</Filter>
-    </ClInclude>
-    <ClInclude Include="TKRLib\Rigidbody.h">
-      <Filter>ヘッダー ファイル\TKRLib</Filter>
-    </ClInclude>
-    <ClInclude Include="Character\Fellows\Fellows.h">
-      <Filter>ヘッダー ファイル\Character\Fellows</Filter>
-    </ClInclude>
-    <ClInclude Include="Character\Fellows\Player.h">
-      <Filter>ヘッダー ファイル\Character\Fellows</Filter>
     </ClInclude>
     <ClInclude Include="Config\Config.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="LocalTag.h">
       <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Animation\AnimationManager.h">
-      <Filter>ヘッダー ファイル\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="TKRLib\Collidable.h">
-      <Filter>ヘッダー ファイル\TKRLib</Filter>
-    </ClInclude>
-    <ClInclude Include="TKRLib\ColliderData.h">
-      <Filter>ヘッダー ファイル\TKRLib</Filter>
-    </ClInclude>
-    <ClInclude Include="TKRLib\Physics.h">
-      <Filter>ヘッダー ファイル\TKRLib</Filter>
     </ClInclude>
     <ClInclude Include="UI\Button\Button.h">
       <Filter>ヘッダー ファイル\UI\Button</Filter>
@@ -232,6 +178,24 @@
     </ClInclude>
     <ClInclude Include="InputDevice\KeyBoard\KeyBoard.h">
       <Filter>ヘッダー ファイル\InputDevice\KeyBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="TKRLib\Physics.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="TKRLib\Collidable.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="TKRLib\Rigidbody.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="TKRLib\TKRLib.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect\2D\FadeInAndFadeOut.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Fellow\Player.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

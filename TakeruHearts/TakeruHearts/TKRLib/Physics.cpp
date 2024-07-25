@@ -1,47 +1,45 @@
-#include "Physics.h"
 #include "DxLib.h"
-#include "TKRLib.h"
 #include <cassert>
+#include "Physics.h"
+#include "Rigidbody.h"
+#include "Collidable.h"
 
-void TKRLib::Physics::Entry(Collidable* collidable)
+
+void TKRLib::Physics::Entry(const Collidable* collidable)
 {
 	bool found = (std::find(collidables.begin(), collidables.end(), collidable) != collidables.end());
 	if (!found)
 	{
 		collidables.emplace_back(collidable);
 	}
-	else
+	else//ìoò^Ç≥ÇÍÇƒÇ¢ÇΩÇÁÉGÉâÅ[ÇìfÇ≠
 	{
-		assert(0 && "ëIÇŒÇÍÇΩclooidableÇÕìoò^Ç≥ÇÍÇƒÇÈÇÊ");
+		assert(0 && "éwíËÇÃcollidableÇÕìoò^çœÇ›ÇæÇ®");
 	}
+
+	printfDx("ìoò^ÅI");
 }
 
-void TKRLib::Physics::Exit(Collidable* collidable)
+void TKRLib::Physics::Exit(const Collidable* collidable)
 {
 	bool found = (std::find(collidables.begin(), collidables.end(), collidable) != collidables.end());
-	if (!found)
+	if (found)
 	{
-		collidables.remove(collidable);
+		collidables.emplace_back(collidable);
 	}
-	else
+	else//ìoò^Ç≥ÇÍÇƒÇ¢ÇΩÇÁÉGÉâÅ[ÇìfÇ≠
 	{
-		assert(0 && "ëIÇŒÇÍÇΩclooidableÇÕìoò^Ç≥ÇÍÇƒÇ»Ç¢Ç®");
+		assert(0 && "éwíËÇÃcollidableÇÕìoò^çœÇ›Ç∂Ç·Ç»Ç¢Ç®");
 	}
+	printfDx("ìoò^âèúÅI");
 }
 
 void TKRLib::Physics::Update()
 {
 	for (auto& item : collidables)
 	{
-		auto pos = item->rigidbody.GetPos();
-		auto nextPos = VAdd(pos, item->rigidbody.GetVel());
-
-		item->rigidbody.SetPos(nextPos);
-
-		//if (/*è’ìÀÇµÇΩÇÁ*/)
-		//{
-		//	//è’ìÀÇ…ÇÊÇÈÉ|ÉWÉVÉáÉìï‚ê≥
-		//	//è’ìÀí ím
-		//}
+		item->OnCollide();
 	}
+	
+	printfDx("ìoò^ÅI");
 }

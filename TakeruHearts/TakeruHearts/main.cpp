@@ -59,10 +59,6 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	//初期化（開始）
 	//構造体のインスタンス作成
 	GameConfig config;
-	SceneManager sceneManager(std::make_unique<SceneTitle>());
-
-	sceneManager.Init();
-
 
 	//LoadConfigで指定のパスが開けなかった場合は１を返す
 	if (!LoadConfig("../Data/AllVariables/GameConfig.json", config))
@@ -73,7 +69,10 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	//ウィンドウ画面の調整
 	SetGraphMode(config.screenWidth, config.screenHeight,16);
 	SetWindowSize(config.screenWidth, config.screenHeight);
-
+	
+	//構造体のインスタンス作成
+	SceneManager sceneManager(std::make_unique<SceneTitle>());
+	sceneManager.Init();
 
 	//初期化（終了）
 

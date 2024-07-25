@@ -1,21 +1,15 @@
 #pragma once
-#include "Rigidbody.h"
-#include "DxLib.h"
 
 namespace TKRLib
 {
 	class Rigidbody;
-	class Physics;
-
 	class Collidable abstract
 	{
 	public:
-		virtual void OnCollidable() abstract;
-	
-	protected:
-		TKRLib::Rigidbody rigidbody;
+		virtual void OnCollide() abstract;
 
-		friend Physics;
+	private:
+		Rigidbody rigidbody;
 	};
 }
 
