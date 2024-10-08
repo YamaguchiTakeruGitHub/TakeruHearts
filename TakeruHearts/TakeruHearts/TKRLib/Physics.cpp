@@ -1,8 +1,6 @@
 #include "DxLib.h"
 #include <cassert>
-#include "Physics.h"
-#include "Rigidbody.h"
-#include "Collidable.h"
+#include "../TKRLib/TKRLib.h"
 
 /// <summary>
 /// ìoò^
@@ -52,6 +50,14 @@ void TKRLib::Physics::Update()
 	for (auto& item : collidables)
 	{
 		item->OnCollide();
+
+		auto pos = item->rigidbody.GetPos();
+		auto nextPos = VAdd(pos, item->rigidbody.GetVelocity());
+#if _DEBUG
+		DebugDraw::DrawLine(pos, nextPos, 0xff00ff);
+#endif
+		item->rigidbody.SetPos(nextPos);
+
 	}
 
 	printfDx("ìoò^ÅI\n");

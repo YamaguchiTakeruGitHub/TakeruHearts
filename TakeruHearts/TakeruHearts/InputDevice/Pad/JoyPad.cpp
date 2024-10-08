@@ -12,12 +12,14 @@ InputDevice::JoyPad::JoyPad()
 	, isRB(false)
 	, isBACK(false)
 	, isSTART(false)
-	, isSTICKL(false)
-	, isSTICKR(false)
+	, isSTICKBL(false)
+	, isSTICKBR(false)
 	, isDUP(false)
 	, isDRIGHT(false)
 	, isDDOWN(false)
 	, isDLEFT(false)
+	
+
 
 	, pisA(false)
 	, pisB(false)
@@ -54,13 +56,15 @@ void InputDevice::JoyPad::Init()
 	isRB = false;
 	isBACK = false;
 	isSTART = false;
-	isSTICKL = false;
-	isSTICKR = false;
+	isSTICKBL = false;
+	isSTICKBR = false;
 
 	isDUP = false;
 	isDRIGHT = false;
 	isDDOWN = false;
 	isDLEFT = false;
+
+
 
 	pisA = false;
 	pisB = false;
@@ -83,8 +87,6 @@ void InputDevice::JoyPad::Init()
 
 void InputDevice::JoyPad::Update()
 {
-
-	
 	isA = false;
 	isB = false;
 	isX = false;
@@ -93,8 +95,8 @@ void InputDevice::JoyPad::Update()
 	isRB = false;
 	isBACK = false;
 	isSTART = false;
-	isSTICKL = false;
-	isSTICKR = false;
+	isSTICKBL = false;
+	isSTICKBR = false;
 
 	isDUP = false;
 	isDRIGHT = false;
@@ -126,49 +128,75 @@ void InputDevice::JoyPad::Update()
 	//Xボタン
 	if (pad.Buttons[PadButton::X])
 	{
+		pisX = true;
 		isX = true;//別クラスで判定する用のフラグ
 	}
 	//LBボタン
 	if (pad.Buttons[PadButton::LB])
 	{
+		pisLB = true;
 		isLB = true;//別クラスで判定する用のフラグ
 	}
 	//RBボタン
 	if (pad.Buttons[PadButton::RB])
 	{
+		pisRB = true;
 		isRB = true;//別クラスで判定する用のフラグ
 	}
 	//BACKボタン
 	if (pad.Buttons[PadButton::BACK])
 	{
+		pisBACK = true;
 		isBACK = true;//別クラスで判定する用のフラグ
 	}
 	//STARTボタン
 	if (pad.Buttons[PadButton::START])
 	{
+		pisSTART = true;
 		isSTART = true;//別クラスで判定する用のフラグ
 	}
 	//STICKLボタン
-	if (pad.Buttons[PadButton::STICKL])
+	if (pad.Buttons[PadButton::STICKBL])
 	{
-		isSTICKL = true;//別クラスで判定する用のフラグ
+		pisSTICKL = true;
+		isSTICKBL = true;//別クラスで判定する用のフラグ
 	}
 	//STICKRボタン
-	if (pad.Buttons[PadButton::STICKR])
+	if (pad.Buttons[PadButton::STICKBR])
 	{
-		isSTICKR = true;//別クラスで判定する用のフラグ
+		pisSTICKR = true;
+		isSTICKBR = true;//別クラスで判定する用のフラグ
 	}
 
 	//特定のボタンが押されていない時はフラグをおろす
-	if (!pad.Buttons[PadButton::A])
+	if (!pad.Buttons[PadButton::A] 
+		&& !pad.Buttons[PadButton::B] 
+		&& !pad.Buttons[PadButton::Y] 
+		&& !pad.Buttons[PadButton::X] 
+		&& !pad.Buttons[PadButton::LB]
+		&& !pad.Buttons[PadButton::RB]
+		&& !pad.Buttons[PadButton::BACK]
+		&& !pad.Buttons[PadButton::START]
+		&& !pad.Buttons[PadButton::STICKBL]
+		&& !pad.Buttons[PadButton::STICKBR])
 	{
 		pisA = false;
+		pisA = false;
+		pisB = false;
+		pisX = false;
+		pisY = false;
+		pisLB = false;
+		pisRB = false;
+		pisBACK = false;
+		pisSTART = false;
+		pisSTICKL = false;
+		pisSTICKR = false;
+
+		pisDUP = false;
+		pisDRIGHT = false;
+		pisDDOWN = false;
+		pisDLEFT = false;
 	}
-
-
-
-
-
 	/*ボタン（end）*/
 
 	/*十字キー（start）*/
@@ -198,6 +226,14 @@ void InputDevice::JoyPad::Update()
 		break;
 	}
 	/*十字キー（end）*/
+
+
+	/*ジョイステック(strat)*/
+
+	
+
+	/*ジョイステック(end)*/
+
 
 }
 

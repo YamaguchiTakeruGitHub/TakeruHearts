@@ -139,6 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera\Camera.cpp" />
+    <ClCompile Include="Map\MapBase.cpp" />
+    <ClCompile Include="Map\MapManager.cpp" />
+    <ClCompile Include="TKRLib\DebugDraw.cpp" />
     <ClCompile Include="Effect\2D\FadeInAndFadeOut.cpp" />
     <ClCompile Include="Object\ObjctBase.cpp" />
     <ClCompile Include="Object\Fellow\Player.cpp" />
@@ -160,6 +164,10 @@
     <ClCompile Include="Scene\SceneTitle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera\Camera.h" />
+    <ClInclude Include="Map\MapBase.h" />
+    <ClInclude Include="Map\MapManager.h" />
+    <ClInclude Include="TKRLib\DebugDraw.h" />
     <ClInclude Include="Effect\2D\FadeInAndFadeOut.h" />
     <ClInclude Include="Object\ObjctBase.h" />
     <ClInclude Include="Object\Fellow\Player.h" />

@@ -18,8 +18,8 @@ namespace InputDevice
 		RB = 5,
 		BACK = 6,
 		START = 7,
-		STICKL = 8,
-		STICKR = 9,
+		STICKBL = 8,
+		STICKBR = 9,
 
 		/*十字キー*/
 		CROSSKEY = 0,
@@ -27,9 +27,10 @@ namespace InputDevice
 		DRIGHT = 9000,			//右
 		DDOWN = 18000,			//下
 		DLEFT = 27000,			//左
-		DNONE = true			//何もしてない
+		DNONE = true,			//何もしてない
 	};
 
+	
 	class JoyPad
 	{
 	public:
@@ -39,6 +40,7 @@ namespace InputDevice
 		void Init();
 		void Update();
 		void Draw();
+
 
 	private:
 		DINPUT_JOYSTATE pad;
@@ -58,8 +60,8 @@ namespace InputDevice
 		bool isRB;
 		bool isBACK;
 		bool isSTART;
-		bool isSTICKL;
-		bool isSTICKR;
+		bool isSTICKBL;
+		bool isSTICKBR;
 
 		bool isDUP;
 		bool isDRIGHT;
@@ -67,8 +69,9 @@ namespace InputDevice
 		bool isDLEFT;
 	
 
+
 	private:
-		
+		/*押し込み瞬間の際のフラグ*/
 		bool pisA;
 		bool pisB;
 		bool pisX;

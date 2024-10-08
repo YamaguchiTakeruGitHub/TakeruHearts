@@ -18,7 +18,10 @@ public:
 	void OnCollide() override;
 
 private:
+
 	InputDevice::InputDeviceManager* idm;
 
 };
+
+
 

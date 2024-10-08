@@ -2,11 +2,13 @@
 #include "../TKRLib/Physics.h"
 #include "../TKRLib/Collidable.h"
 
+
 class Physics;
 class ObjctBase : public TKRLib::Collidable
 {
 public:
-	ObjctBase() {};
+	ObjctBase();
+	virtual ~ObjctBase();
 	virtual void Init(TKRLib::Physics* physics) = 0;
 	virtual void Final(TKRLib::Physics* physics) = 0;
 	virtual void Update() = 0;
@@ -17,6 +19,7 @@ public:
 protected:
 	int modelHandle;
 	float speed;
+	
 
 };
 

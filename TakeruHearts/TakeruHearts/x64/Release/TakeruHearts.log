@@ -1,7 +1,7 @@
-﻿  JoyPad.cpp
+﻿  Player.cpp
 C:\Users\fko2347069\Takeru\自習用\TakeruHearts\TakeruHearts\TakeruHearts\プロジェクトに追加すべきファイル_VC用\DxLib.h(3344,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   コード生成しています。
-  5 of 1602 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+  1 of 1602 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   コード生成が終了しました。

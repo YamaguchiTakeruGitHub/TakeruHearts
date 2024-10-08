@@ -6,8 +6,8 @@ SceneGame::SceneGame()
 	DrawFormatString(0, 0, 0xffffff, "Gameデストラクタ");
 
 	physics = new TKRLib::Physics;
-
 	player = new Player;
+	m_camera = new Camera;
 }
 
 SceneGame::~SceneGame()
@@ -17,6 +17,8 @@ SceneGame::~SceneGame()
 	delete(physics);
 	player = nullptr;
 	delete(physics);
+	m_camera = nullptr;
+	delete(m_camera);
 }
 
 void SceneGame::Init()
@@ -31,6 +33,7 @@ void SceneGame::Update()
 	DrawFormatString(0, 60, 0xffffff, "Game更新");
 	idm->Update();
 	player->Update();
+	m_camera->Update();
 }
 
 void SceneGame::Draw()

@@ -2,6 +2,7 @@
 #include "SceneBase.h"
 #include "../TKRLib\TKRLib.h"
 #include "../Object/Fellow/Player.h"
+#include "../Camera/Camera.h"
 
 
 
@@ -20,6 +21,7 @@ public:
 private:
 	TKRLib::Physics* physics;
 	Player* player;
+	Camera* m_camera;
 
 };
 

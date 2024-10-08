@@ -3,10 +3,12 @@
 
 Player::Player()
 {
+	idm = new InputDevice::InputDeviceManager();
 }
 
 void Player::Init(TKRLib::Physics* physics)
 {
+	idm->Init();
 	physics->Entry(this);
 
 	rigidbody.Init();
@@ -20,22 +22,28 @@ void Player::Final(TKRLib::Physics* physics)
 {
 	physics->Exit(this);
 	MV1DeleteModel(modelHandle);
+	idm->End();
+
+	idm = nullptr;
+	delete idm;
+
 }
 
 void Player::Update()
 {
-	VECTOR dir = VGet(0, 0, 0);
-	dir.x = 0;
-	dir.y = 0;
-	
+	idm->Update();
 
-
-	MV1SetPosition(modelHandle, rigidbody.GetPos());
+	VECTOR dir = VGet(0.0f, 0.0f, 0.0f);
+	dir.x = 0.0f;
+	dir.y = 0.0f;
+	dir.z = 0.0f;
 }
 
 void Player::Draw()
 {
+	idm->Draw();
 	MV1DrawModel(modelHandle);
+	DrawSphere3D(rigidbody.GetPos(), 80.0f, 32, 0xffffff, 0xffffff, true);
 }
 
 void Player::OnCollide()
